@@ -1,0 +1,153 @@
+<!--doctype specifies to the web browser that this is an HTML5 file and all of it should be wrapped in html tags-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--to show that UTF-8 characters are used not ASCII...-->
+    <meta charset="UTF-8" />
+    <!--this sets the view of the webpage equal to the device width with normal zoom so the page fits every device-->
+    <meta name="viewport" content="width=device-width initial scale=1" />
+    <link rel="stylesheet" href="/myintro.css">
+    <title>My Introduction in HTML</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#languages">Jump to Languages</a> |
+        <a href="#about you">About you</a>
+      </nav>
+      <div>
+      <h1>
+        <!--Back to Top-->
+        <footer id="top"></footer>
+        Ali Haider Malik
+      </h1>
+    </div>
+      <p><strong>Student / Aspiring Developer</strong></p>
+      <hr />
+      <h2>About me</h2>
+      <p>
+        I am twenty three years old from Russia. <br />
+        I love to learn something new every day
+      </p>
+    </header>
+    <main>
+      <article>
+        <section>
+    <h3>
+      <footer id="languages"></footer>
+      Languages
+    </h3>
+    <!--have a numbered list-->
+    <ol>
+      <li>English</li>
+      <li>Russian</li>
+      <li>Urdu</li>
+      <li>French</li>
+      <li>Python</li>
+      <li>C</li>
+      <li>HTML / CSS / Javascript</li>
+    </ol>
+  </section>
+  <section>
+    <h3>Interests</h3>
+    <!--
+        create an unordered list without numbers
+    -->
+    <ul>
+      <li>Sports</li>
+      <li>
+        <!--a link that opens in a new tab-->
+        <a
+          href="https://www.goodreads.com/book/show/386162.The_Hitchhiker_s_Guide_to_the_Galaxy"
+          target="_blank"
+          >Reading</a
+        >
+      </li>
+      <li></li>
+    </ul>
+  </section>
+    <!--inside main but not really part of important content as it's just a practice for building tables for me-->
+    <aside>
+    <table border="1">
+      <thead>
+        <caption><h3>Sports</h3></caption>
+        <th>I play</th>
+        <th>I don't play</th>
+      </thead>
+    <tr>
+      <td>Football</td>
+      <td>Hockey</td>
+    </tr>
+    <tr>
+      <!--very rarely play so it's something that i play and don't play-->
+      <td colspan="2" align="center">Volleyball</td>
+    </tr>
+    <tr>
+     <td>Basketball</td>
+     <td>Table tennis</td>
+    </tr>
+  </table>
+</aside>
+<section>
+    <h2>
+      <footer id="about you"></footer>
+      About you
+    </h2>
+    <!--To store input-->
+    <form action="../index.html">
+    </label>
+    <!--input should be of type text and shouldn't be able to be submitted empty and should show something while it's empty-->
+    <input type="text" required placeholder="Enter your name here" />
+    <!--a submit button with the name send-->
+    <button type="submit">Send</button>
+      <!--cats or dogs on a separate line from langauges so creates a block-->
+      <div>
+        <!--only one can be selected, cats or dogs-->
+        <label for="cats">
+          <input
+            type="radio"
+            id="cats"
+            name="catsordogs"
+            value="cat"
+            checked
+          />Cat
+        </label>
+        <label for="dogs">
+          <input type="radio" id="dogs" name="catsordogs" />Dog
+        </label>
+      </div>
+      <!--check as many boxes-->
+      
+      <label for="python">
+        <input
+          type="checkbox"
+          id="python"
+          checked
+          name="languages"
+          value="python"
+        />Python
+      </label>
+      <label for="C">
+        <input id="C" type="checkbox" value="C" name="languages" />C
+      </label>
+      <label for="htmlcss">
+        <input type="checkbox" name="languages" id="htmlcss" />HTML / CSS
+      </label>
+      <label for="javascript">
+        <input type="checkbox" name="languages" id="javascript" />Javascript
+      </label>
+      <label for="java">
+        <input type="checkbox" name="languages" id="java" />Java</label>
+      
+    </form>
+  </section>
+  <!--adds a blank line. could also surround languages with div instead-->
+    <br>
+    <a href="#top">Back to Top</a>
+  </article>
+  </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
