@@ -1,0 +1,22 @@
+.first-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/up-to-the-sky-2-1409883.jpg);
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 2px 2px 2px 2px;
+  padding: 12px 12px;
+  border: 2px solid red;
+}
+.first-text {
+  color: antiquewhite;
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+body {
+  align-items: center;
+}
