@@ -68,12 +68,12 @@
           >Reading</a
         >
       </li>
-      <li></li>
+      <li>Coding</li>
     </ul>
   </section>
     <!--inside main but not really part of important content as it's just a practice for building tables for me-->
     <aside>
-    <table border="1" class="sports-table">
+    <table border=1 class="sports-table">
       <thead>
         <caption><h3>Sports</h3></caption>
         <th>I play</th>
@@ -98,13 +98,29 @@
       <footer id="about you"></footer>
       About you
     </h2>
-    <!--To store input-->
-    <form action="../index.html">
+    
+
+      <!--make a google search bar built in. Below is the url if you search dog in google.
+      https://www.google.com/search?q=dog&sxsrf=AOaemvKIUJzyh3wuDaEh9L0MucUAzFVSRQ%3A1642865544767&source=hp&ei=iCPsYfPYK9KlkwWH7YegBQ&iflsig=ALs-wAMAAAAAYewxmLL-kP-P7IB7b_XkOQMPXUO0HK6f&ved=0ahUKEwjzvNOJ18X1AhXS0qQKHYf2AVQQ4dUDCAc&uact=5&oq=dog&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUILhCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgcIIxDqAhAnOg0ILhDHARDRAxDqAhAnOgQIIxAnOgsILhCABBDHARCjAlDsCFjwCmChDGgBcAB4AIABUIgB4QGSAQEzmAEAoAEBsAEK&sclient=gws-wiz
+      if you use this url, google will show dog too: https://www.google.com/search?q=dog-->
+      <div><form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+        </form>
+        </div>
+        <!--https://www.youtube.com/results?search_query=abc
+        Youtube uses https://www.youtube.com/results for searches and input name as search_query-->
+        <div><form action="https://www.youtube.com/results">
+          <input type="text" name="search_query">
+          <button>Search Youtube</button>
+        </form>
+      </div>
+      <!--To store input somewhere, form is opened-->
+      <form action="#">
     </label>
-    <!--input should be of type text and shouldn't be able to be submitted empty and should show something while it's empty-->
-    <input type="text" required placeholder="Enter your name here" />
-    <!--a submit button with the name send-->
-    <button type="submit">Send</button>
+    <!--input should be of type text and shouldn't be able to be submitted empty and should show something while it's empty. length of characters should be between 3-20-->
+    <input type="text" 
+    placeholder="Enter your name here" minlength="3" maxlength="20" required/> 
       <!--cats or dogs on a separate line from langauges so creates a block-->
       <div>
         <!--only one can be selected, cats or dogs-->
@@ -120,10 +136,10 @@
         <label for="dogs">
           <input type="radio" id="dogs" name="catsordogs" />Dog
         </label>
-      </div>
-      <!--check as many boxes-->
-      
+      <p>What languages do you use?</p>
+      <!--checking multiple boxes possible-->
       <label for="python">
+        <!--input is a self closing tag as you dont have to create another tag to close it-->
         <input
           type="checkbox"
           id="python"
@@ -136,15 +152,29 @@
         <input id="C" type="checkbox" value="C" name="languages" />C
       </label>
       <label for="htmlcss">
-        <input type="checkbox" name="languages" id="htmlcss" />HTML / CSS
+        <input type="checkbox" name="languages" id="htmlcss" value="htmlcss" />HTML / CSS
       </label>
       <label for="javascript">
-        <input type="checkbox" name="languages" id="javascript" />Javascript
-      </label>
+        <input type="checkbox" name="languages" id="javascript" value="js"/>Javascript</label>
       <label for="java">
-        <input type="checkbox" name="languages" id="java" />Java</label>
-      
-    </form>
+        <input type="checkbox" name="languages" id="java" value="java"/>Java</label>
+    <div><label for="favlang">Select your favorite language</label>
+      <select name="favoritelanguage" id="favlang">
+        <option value="python">Python</option>
+        <option value="js">Javascript</option>
+        <option value="c">C/C++</option>
+        <option value="java">Java</option>
+        <option value="other">Other</option>
+      </select>
+  </div>
+  <!--can also use other types of input like date, range, email. Email will require a @ sign if set to required-->
+      <label for="textmessage">Additional info<br>
+      <textarea name="message" id="textmessage" cols="30" rows="10" placeholder="Type your message here"></textarea>
+    </label>
+    <!--a submit button with the name send-->
+    <button type="submit">Send</button>
+    <!--close the form that goes to location #-->
+  </form>
   </section>
   <!--adds a blank line. could also surround languages with div instead-->
     <br>
