@@ -1,67 +1,98 @@
 .airplane-image-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
   background: url(/up-to-the-sky-2-1409883.jpg);
   height: 600px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 2px 2px 2px 2px;
-  padding: 12px 12px;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  /*so the margin and padding don't increase the width of the box to more than 100%*/
+  box-sizing: border-box;
 }
-p {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.first-text {
+
+.airplane-image-container > p {
   color: antiquewhite;
-  font-size: 40px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  /* background-color: lightskyblue; */
   text-align: center;
 }
 body {
   align-items: center;
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  background-color: floralwhite;
 }
-/*navbar is the flexbox container for the whole nav*/
+/*flexbox container for logo*/
 .top-most-container {
-  background-color: red;
-  height: 100px;
+  /* background-color: red; */
+  height: 10vw;
+  width: 100%;
+  /*to prevent the logo from getting too small*/
+  min-height: 100px;
   display: flex;
   align-content: center;
-  gap: 20px;
+  justify-content: center;
+  /*0.5 em means half of parent. parent here is the body which has a default size of 16px. so 8px. or 0.5 rem is 0.5 of root size which is again 16px by default*/
+  margin-bottom: 0.5rem;
 }
-/*targeting the logo-image*/
-.logo-item {
-  height: 50px;
-  /* background-color: cyan; */
+/*container for the logo image*/
+.top-most-container img {
+  /*width and heigh of 100% of it's parent which is the container*/
+  height: 100%;
+  width: 100%;
+}
+/*targeting the logo image itself*/
+.logo-container img {
+  height: 100%;
   align-self: center;
 }
-.logo-item img {
-  height: 50px;
-}
-.name-item {
-  /* background-color: darkgoldenrod; */
-  align-self: center;
-  font-size: 20px;
-}
-.container-links {
+.links-container {
   display: flex;
-  height: 50px;
+  width: 100%;
+  justify-content: center;
   align-content: center;
-  justify-content: space-between;
   background-color: darkred;
 }
-.container-links a {
-  align-self: center;
+.links-container a {
+  padding: 15px 20px;
+  /* background-color: lightslategray; */
+  /* margin: 5px 10px; */
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  transition: all 250ms ease;
 }
-a:link {
+a {
   color: rgb(207, 153, 37);
   text-decoration: none;
   text-transform: capitalize;
 }
-a:visited {
-  color: lightcoral;
-}
+
 a:hover {
-  color: lightskyblue;
+  background-color: lightskyblue;
+  color: black;
+  /*creates a shadow 0px on x axis or right and 5px on left y axis. 5px is how far the blur will go and shadow color*/
+  box-shadow: 0px 5px 5px rgb(189, 189, 189);
+  /*translateY makes it do up or down. negative value makes it go up*/
+  transform: translateY(-3px);
+  /*to change the pointer style whenever you hover over links*/
+  cursor: pointer;
+}
+a:active {
+  background-color: blue;
+}
+@media screen and (max-width: 700px) {
+  .airplane-image-container,
+  .links-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .name-container {
+    background-color: red;
+  }
 }
