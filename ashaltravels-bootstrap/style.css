@@ -1,0 +1,34 @@
+/*to change the color of the area around the topmost logo*/
+.navbar-topmost {
+  background-color: #f8f8f8;
+}
+.navbar-links {
+  background-color: #a62121;
+}
+body {
+  background-color: #f8f8f8;
+}
+.nav-item {
+  transition: all 250ms ease 100ms;
+}
+.nav-item:hover {
+  background-color: #bf2633;
+  /*to override the text-color as i wasn't able to override with the current specificity of 20*/
+  color: #f2f2f2 !important;
+  /*creates a shadow 0px on x axis or right and 5px on left y axis. 5px is how far the blur will go and shadow color*/
+  box-shadow: 0px 5px 5px rgb(189, 189, 189);
+  /*translateY makes it do up or down. negative value makes it go up*/
+  transform: translateY(-3px);
+  /*to change the pointer style whenever you hover over links*/
+  cursor: pointer;
+}
+.airplane-image-container {
+  display: flex;
+  background: url(/up-to-the-sky-2-1409883.jpg);
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.airplane-image-container p {
+  align-self: center;
+}
