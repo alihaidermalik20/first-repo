@@ -1,3 +1,4 @@
+// Declaring an empty array
 const myShip = [];
 // first position of the ship is at max 4 so 4.99 will be floored to 4 and the next position will be at max 5 and 6
 myShip[0] = Math.floor(Math.random() * 5);
