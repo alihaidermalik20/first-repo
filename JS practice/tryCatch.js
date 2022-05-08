@@ -8,4 +8,5 @@ function yell(msg) {
     } catch(e) {
         console.log("Please pass a string next time");
     }
+    console.log('Function continues');
 };
