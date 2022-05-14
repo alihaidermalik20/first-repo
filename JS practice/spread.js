@@ -9,6 +9,7 @@ const girls = ['dasha', 'masha'];
 // combines both boys and girls array
 const people = [...boys, ...girls];
 
+// takes an object and adds more to it
 const dataFromForm = {
     name: 'Ali',
     email: 'abc@gmail.com',
