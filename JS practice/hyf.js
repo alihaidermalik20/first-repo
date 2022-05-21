@@ -29,18 +29,26 @@
 console.log('--- begin program ---');
 
 // initializing variables to be used later so that they're local and not global and available under scope in debugging
+
 let input = null;
 let checking, output;
 
 while (input===null) {
+
 // first putting the prompt input to checking to check if it meets all the conditions
+
 checking = prompt('Please enter a text starting with a Capital letter and ending with period');
+
+// if nothing is entered in prompt, checking will be an empty string "" and if prompt is cancelled, checking becomes null
+
 if (checking === "" || checking === null) {
     continue;
 }
 else if (checking[0] !== checking[0].toUpperCase()) {
 alert('Please type again, your input did not start with capital letter');
+
 // if you enter this if because first letter is not capital, continue will take you back to while(input===null) line
+
 continue;
 } else if (!checking.endsWith('.')) {
 alert('Please type again, your input didn\t end with a dot');
