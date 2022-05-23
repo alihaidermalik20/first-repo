@@ -3,11 +3,12 @@ let message2 = "Hello World";
 let notMessage = "1273.";
 let empty = "";
 let space = "  ";
+let letterNumber = "Hello World 1";
 
 let pattern = /^[A-Za-z\s]+$/;
 let pattern2 = /[^\s]/;
 
-if (space.search(pattern) === 0 && space.search(pattern2) === 0){
+if (letterNumber.search(pattern) === 0 && letterNumber.search(pattern2) === 0){
     console.log("congratulations");
 }
 
