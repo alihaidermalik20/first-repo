@@ -8,5 +8,3 @@ const [gold, silver, bronze, ...everyoneElse] = raceResults;
 // silver = 'Zoe';
 // bronze = 'Emma';
 // everyone else = ['Biggie', 'Tupac', 'Coolio'];
-
-console.log(gold);
