@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- <link
+href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+rel="stylesheet"
+/>
+<link href="styles.css" rel="stylesheet" /> -->
+    <title>Trivia!</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+      <div class="section" id="mcqs">
+        <h2>Part 1: Multiple Choice</h2>
+        <hr />
+        <!-- TODO: Add multiple choice question here -->
+        <h3>Which one of these fruits is the best one?</h3>
+        <div>
+          <input type="radio" id="fruit1" name="mcq" />
+          <label for="fruit1">Apple</label>
+        </div>
+        <div>
+          <input type="radio" id="fruit2" name="mcq" />
+          <label for="fruit2">Mango</label>
+        </div>
+        <div>
+          <input type="radio" id="fruit3" name="mcq" />
+          <label for="fruit3">Banana</label>
+        </div>
+        <div>
+          <input type="radio" id="fruit4" name="mcq" />
+          <label for="fruit4">Peach</label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Part 2: Free Response</h2>
+        <hr />
+        <!-- TODO: Add free response question here -->
+        <h3>What's the best programming language</h3>
+        <input type="text" id="fr" />
+        <button>Submit</button>
+      </div>
+    </div>
+    <script src="./questions.js">
+      // TODO: Add code to check answers to questions
+    </script>
+  </body>
+</html>
