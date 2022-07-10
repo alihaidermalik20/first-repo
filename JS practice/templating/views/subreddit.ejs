@@ -1,0 +1,22 @@
+<!-- = evaluates the js and renders it as html. - sees it as html -->
+
+<!-- header, footer and navbar are now templates in views/partials dir that can be included -->
+<%- include('partials/header') %> <%- include('partials/navbar') %>
+
+<div class="container">
+  <!-- can directly access the values of the given subreddit by passing it's reference alone -->
+  <h1>You are viewing the <%= name %> subreddit</h1>
+  <h2>Total subscribers: <%= subscribers %></h2>
+  <p><%= description %></p>
+  <hr />
+  <!-- there are several posts so enter each one and take their title and author and if image exists, insert the image-->
+  <% for (let post of posts) { %>
+  <article>
+    <p><%= post.title %> - <b><%= post.author %> </b></p>
+    <% if(post.img) { %>
+    <img src="<%= post.img %> " alt="" />
+    <% } %>
+  </article>
+  <% } %>
+</div>
+<%- include('partials/footer') %>

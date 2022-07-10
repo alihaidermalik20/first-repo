@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>The Home Page</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit
-      hic ad dignissimos saepe excepturi dolor facilis quasi minima quia iusto
-      magnam veritatis nesciunt quas, accusamus at corrupti repellendus omnis.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-      doloremque voluptas perferendis consequatur rerum eligendi fugit
-      dignissimos voluptates rem aliquam! Repellat minima distinctio ex quos,
-      voluptas cum iure consequuntur dolor?
-    </p>
-  </body>
-</html>
+<%- include('partials/header') %> <%- include('partials/navbar') %>
+
+<h1>The Home Page <%= `${1 + 2 + 3} ${'helloWorld'.toUpperCase()}` %></h1>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit hic
+  ad dignissimos saepe excepturi dolor facilis quasi minima quia iusto magnam
+  veritatis nesciunt quas, accusamus at corrupti repellendus omnis.
+</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto doloremque
+  voluptas perferendis consequatur rerum eligendi fugit dignissimos voluptates
+  rem aliquam! Repellat minima distinctio ex quos, voluptas cum iure
+  consequuntur dolor?
+</p>
+<%- include('partials/footer') %>

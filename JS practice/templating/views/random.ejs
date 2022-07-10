@@ -1,0 +1,12 @@
+<%- include('partials/header') %> <%- include('partials/navbar') %>
+<!-- can use the variable num here because exported it from res.render in index.js -->
+<h1>Your random number is: <%= num %></h1>
+<!-- for long multi lone logic, the below sign is used on every line that has js code -->
+<% if (num % 2 === 0) { %>
+<h2>This number is even!</h2>
+<% } else { %>
+<h2>This number is odd</h2>
+<% } %>
+<!-- if it's one line, evaluation can be used like this -->
+<h3>The number is <%= num % 2 === 0 ? 'Even' : 'Odd' %></h3>
+<%- include('partials/footer') %>
