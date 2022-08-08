@@ -44,10 +44,16 @@ function filter(ev) {
   const searchingFor = ev.target.value.toLowerCase();
   // convert HTML collection into an array first
   const items = ul.getElementsByTagName("li");
-  console.log(items);
   // iterates over the lis with every li passed as item
   Array.from(items).forEach(function (item) {
     // takes the current li's and goes to it's first Node not element to take the text inside li. first children/element is the button
     const currentLiText = item.firstChild.textContent;
+    // the moment the text doesn't match search item letter by letter, it will return -1 and hide that li
+    // else, show that li again so if someone backspace, that li should be visible again
+    if (currentLiText.toLowerCase().indexOf(searchingFor) == -1) {
+      item.style.display = "none";
+    } else {
+      item.style.display = "block";
+    }
   });
 }
