@@ -1,10 +1,12 @@
 const inputField = document.querySelector("#item");
 const addItemClicked = document.querySelector("#submit");
 const ul = document.querySelector("#items");
+const searchInput = document.querySelector("#filter");
 
 addItemClicked.addEventListener("click", addItem);
 // listening for a click on any item within the ul
 ul.addEventListener("click", removeItem);
+searchInput.addEventListener("keyup", filter);
 
 function addItem(ev) {
   ev.preventDefault();
@@ -32,6 +34,20 @@ function removeItem(ev) {
   // this event fires off if anything inside ul is clicked.
   // we continue only if the remove button that contains class of delete is clicked
   if (ev.target.classList.contains("delete")) {
+    // children of ul are the lis and current target is the button whose parent is the li itself
     ul.removeChild(ev.target.parentElement);
   }
+}
+
+function filter(ev) {
+  // listener is on the search input field so that is the target and what you type in it is the value
+  const searchingFor = ev.target.value.toLowerCase();
+  // convert HTML collection into an array first
+  const items = ul.getElementsByTagName("li");
+  console.log(items);
+  // iterates over the lis with every li passed as item
+  Array.from(items).forEach(function (item) {
+    // takes the current li's and goes to it's first Node not element to take the text inside li. first children/element is the button
+    const currentLiText = item.firstChild.textContent;
+  });
 }
