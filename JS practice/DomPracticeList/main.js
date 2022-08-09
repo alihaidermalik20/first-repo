@@ -27,6 +27,7 @@ function addItem(ev) {
 
     // display the new li under Items inside ul
     ul.appendChild(newItem);
+    inputField.value = "";
   }
 }
 
